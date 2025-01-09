@@ -1,0 +1,64 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>CBWHub - Delicious Food Truck</title>
+
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+
+<!-- Navigation and logo -->
+<nav class="navbar navbar-expand-sm bg-dark">
+  <a class="navbar-brand mb-0 h1" href="#">CBWHub</a>
+  <!-- Navbar links will go here -->
+</nav>
+
+<!-- Main content section -->
+<main class="container p-3 m-auto">
+
+  <!-- Hero image with a call-to-action (CTA) button -->
+  <section class="hero">
+    <img src="{% static 'images/food-truck-hero.jpg' %}" alt="Food Truck Image" class="d-block w-100" />
+    <div class="container p-3 m-auto">
+      <h1>Delicious Food at Your Service!</h1>
+      <p>Visit us to taste the difference!</p>
+      <a href="#" class="btn btn-primary">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Features section with images and text -->
+  <section class="features">
+    <div class="row no-gutters">
+      {% for feature in features %}
+      <div class="col-md-4 mb-3">
+        <img src="{% static 'images/{{ feature.image }}' %}" alt="{{ feature.name }}" />
+        <h5>{{ feature.name }}</h5>
+        <p>{{ feature.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer with social media links and contact details -->
+<footer class="bg-dark text-white py-4">
+  <div class="container p-3 m-auto text-center">
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <p>cbwhub@gmail.com</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JavaScript and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
