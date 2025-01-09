@@ -1,0 +1,23 @@
+cbwhub/
+cbwhub/
+__init__.py
+settings.py
+urls.py
+wsgi.py
+models.py  # Define visitor tracking models here.
+views.py     # Log visitor data, handle login/register requests, and serve the landing page content.
+
+templates/    # Landing page templates go here, utilizing Django's templating engine.
+
+static/
+__init__.py
+manifest.json
+styles.css  # Styles for your site.
+index.html   # The HTML structure of your landing page with Jinja2/Django templating.
+
+requirements.txt  # List dependencies (e.g., Django, psycopg2-binary, Pillow).
+
+README.md          # Documentation for your project.
+
+.env              # Environment variable file containing sensitive data like database credentials.
+
