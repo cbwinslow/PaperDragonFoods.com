@@ -1,0 +1,7 @@
+cbwhub/
+...
+static/
+css/
+styles.css  # Custom CSS file for Bootstrap customizations.
+img/           # Store your landing page images here (e.g., hero image, feature images).
+
